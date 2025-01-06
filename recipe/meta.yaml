@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/semi-ate-installer-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/semi-ate-installer-{{ version }}.tar.gz
   sha256: 55fc6f99dbd549107e130eec444f6510b52fc2335b691c182cbb7fa40d50fbc3
 
 build:
@@ -14,17 +14,17 @@ build:
     - semi-ate-installer = semi_ate_installer.cli:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
     - pip
-    - python >=3.9
+    - python {{ python_min }}
     - setuptools-scm
   run:
     - packaging
     - pyfiglet >=0.8
-    - python >=3.9
+    - python >={{ python_min }}
     - questionary ==1.10.0
     - conda
     - mamba
@@ -38,6 +38,7 @@ test:
     - semi-ate-installer --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/Semi-ATE/Semi-ATE-Installer
