@@ -1,13 +1,13 @@
 {% set name = "semi-ate-installer" %}
-{% set version = "0.0.16" %}
+{% set version = "0.0.22" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/semi-ate-installer-{{ version }}.tar.gz
-  sha256: 55fc6f99dbd549107e130eec444f6510b52fc2335b691c182cbb7fa40d50fbc3
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 8de5cd3823acc4047c3afc35d01083ddb4c5f015b0afb2003cc0ab836d99f9fb
 
 build:
   entry_points:
