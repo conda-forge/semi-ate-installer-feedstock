@@ -22,26 +22,25 @@ requirements:
     - python >=3.9
     - setuptools-scm
     - hatchling
-    - mamba
+    - mamba=1.5.12
   run:
     - packaging
     - pyfiglet >=0.8
     - python >=3.9
     - questionary ==1.10.0
     - conda
-    - mamba
+    - mamba=1.5.12
     - click
 
 test:
   imports:
     - semi_ate_installer
   commands:
-    - pip install mamba
     - pip check
     - semi-ate-installer --help
   requires:
     - pip
-    - mamba
+    #- mamba=1.5.12
 
 about:
   home: https://github.com/Semi-ATE/Semi-ATE-Installer
