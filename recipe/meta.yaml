@@ -37,7 +37,7 @@ test:
     - semi_ate_installer
   commands:
     - pip check
-    - semi-ate-installer --help
+    - "semi-ate-installer --help"
   requires:
     - pip
     #- mamba=1.5.12
