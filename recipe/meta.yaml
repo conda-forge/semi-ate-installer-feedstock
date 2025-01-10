@@ -36,6 +36,7 @@ test:
   imports:
     - semi_ate_installer
   commands:
+    - pip install mamba
     - pip check
     - semi-ate-installer --help
   requires:
