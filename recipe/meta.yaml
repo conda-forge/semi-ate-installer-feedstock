@@ -21,8 +21,8 @@ requirements:
     - pip
     - python >=3.9
     - setuptools-scm
-  run:
     - hatchling
+  run:
     - packaging
     - pyfiglet >=0.8
     - python >=3.9
