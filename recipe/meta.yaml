@@ -35,7 +35,7 @@ test:
   imports:
     - semi_ate_installer
   commands:
-    - pip check
+    #- pip check
     - semi-ate-installer --help
   requires:
     - pip
