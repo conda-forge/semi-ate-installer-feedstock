@@ -1,13 +1,13 @@
 {% set name = "semi-ate-installer" %}
-{% set version = "0.0.16" %}
+{% set version = "0.0.23" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/semi-ate-installer-{{ version }}.tar.gz
-  sha256: 55fc6f99dbd549107e130eec444f6510b52fc2335b691c182cbb7fa40d50fbc3
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 865e362ad4e2f457ad46b9032ce1db42a6a72d502397cb16839a6e55bd5af70d
 
 build:
   entry_points:
@@ -54,4 +54,4 @@ extra:
   recipe-maintainers:
     - nerohmot
     - heli2src
-    - Zlin526F  
+    - Zlin526F
