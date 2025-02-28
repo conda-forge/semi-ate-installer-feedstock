@@ -14,19 +14,19 @@ build:
     - semi-ate-installer = semi_ate_installer.cli:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
     - pip
-    - python >=3.9
+    - python {{ python_min }}
     - setuptools-scm
     - hatchling
     - mamba =1.5.12
   run:
     - packaging
     - pyfiglet >=0.8
-    - python >=3.9
+    - python >={{ python_min }}
     - questionary ==1.10.0
     - conda
     - mamba =1.5.12
@@ -43,6 +43,7 @@ test:
     - pip
     - hatchling
     #- mamba =1.5.12
+    - python {{ python_min }}
 
 about:
   home: https://github.com/Semi-ATE/Semi-ATE-Installer
